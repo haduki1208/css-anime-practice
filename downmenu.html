@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* basic style */
+      .menu {
+        list-style-type: none;
+        width: 200px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+      }
+      .menu > li {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #ffffff;
+      }
+      .menu > li > ul {
+        list-style: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+      }
+      .menu > li > ul > li {
+        overflow: hidden;
+        height: 0;
+        width: 100%;
+        background-color: #000000;
+        transition: 0.2s;
+      }
+      .menu > li:hover > ul > li {
+        height: 40px;
+        line-height: 40px;
+      }
+    </style>
+    <style>
+      /* custom style */
+      html {
+        background-color: #bbbbbb;
+      }
+      .menu > li:hover > ul > li {
+        border-top: 1px solid green;
+      }
+      .menu > li:hover > ul > li:hover {
+        background-color: #222222;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        Language
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Ruby</li>
+          <li>PHP</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

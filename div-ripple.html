@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* basic css */
+      .ripple {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ripple:after {
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transform: scale(0);
+        border-radius: 50%;
+      }
+
+      .ripple:not(:active):after {
+        animation: ripple 0.5s linear;
+      }
+
+      @keyframes ripple {
+        0% {
+          transform: scale(0);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    </style>
+    <style>
+      /* custom css */
+      html {
+        background-color: #bbbbbb;
+      }
+      .ripple {
+        height: 40px;
+        line-height: 40px;
+        width: 200px;
+        background: black;
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ripple">Hello world</div>
+  </body>
+</html>
